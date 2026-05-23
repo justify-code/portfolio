@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fe62ff4426.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <a href="" class="logo">JUS<span>TIFY</span></a>
+      <div class="nav-display">
+        <img id="menu-icon" src="./images/icon-menu.svg" alt="alt" />
+        <nav class="navbar" id="mobile">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home">
+      <div class="home">
+        <div class="container-text">
+          <h5>Hello, it's Me</h5>
+          <h3>JUS<span>TIFY</span></h3>
+          <h6>And i'm a <span id="typing-text"></span></h6>
+          <p>
+            I'm a web Developer with extensive experience for 3
+            years.Transforming ideas into interactive experiences with front-end
+            development expertise and delivering seamless digital exper-iences
+            Expertise is to create and webdesign, Frontend design, and many more
+          </p>
+
+          <div class="btn">
+            <button><a href="">Hire Me</a></button>
+          </div>
+        </div>
+        <div class="home-img">
+          <img src="./images/pic2.jpg" alt="" />
+
+          <div class="social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61573172302728"
+              target="_blank"
+              ><i><i class="bx bxl-facebook-circle"></i></i
+            ></a>
+
+            <a href="https://wwww.instagram.com/dee.justify" target="_blank"
+              ><i><i class="bx bxl-instagram"></i></i
+            ></a>
+
+            <a href="https://www.twitter.com/de_justify" target="_blank"
+              ><i><i class="bx bxl-twitter"></i></i
+            ></a>
+
+            <a
+              href="https://www.linkedin.com/in/oluwaseun-damilare-8b606337"
+              target="_blank"
+              ><i><i class="bx bxl-linkedin"></i></i
+            ></a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <img src="./images/pic2.jpg" alt="" />
+        <div class="about-text">
+          <h3>About <span>Me</span></h3>
+          <h6>I'm a <span id="typing-text2"></span></h6>
+          <p>
+            I am a versatile Full Stack Developer passionate about building
+            modern web applications. I bridge the gap between design and
+            development by creating responsive, user-friendly interfaces while
+            ensuring robust server-side functionality. Skilled in HTML, CSS,
+            Bootsrap JavaScript, Python, Django, Flask and Databases, I thrive
+            on turning ideas into interactive and efficient digital solutions.
+            My goal is to deliver code that’s clean, maintainable, and scalable,
+            while continuously exploring emerging technologies to improve the
+            user experience.
+          </p>
+          <div class="stack">
+            <h4>
+            💻Tech stack:
+            <span>
+              HTML, CSS, Bootstrap, Javascript, Python(Django, Flask)</span
+            >
+          </h4>
+          </div>
+          <div class="btn_skills">
+            <a href="#"> <button>More About Me</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="skill">
+        <h3>skills</h3>
+
+        <div class="pro">
+          <div class="uiux">
+            <h5>UIUX - Figma</h5>
+            <i><i class="fa-brands fa-figma"></i></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus similique deleniti nostrum debitis, corrupti veniam
+              optio nulla impedit eveniet veritatis.
+            </p>
+            <button>Read More</button>
+          </div>
+
+          <div class="front-end">
+            <h5>Web Design</h5>
+            <i><i class="bxr bx-code"></i> </i>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+              voluptate vero distinctio repellat nemo ducimus officiis odio
+              accusantium libero molestiae!
+            </p>
+            <button>Read More</button>
+          </div>
+
+          <div class="back-end">
+            <h5>App Development</h5>
+            <i><i class="fa-brands fa-apple fa-xl"></i></i>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+              libero nihil odit doloremque sint animi labore accusamus
+              praesentium sapiente accusantium.
+            </p>
+            <button class="">Read More</button>
+          </div>
+        </div>
+
+        <div class="container_skills">
+          <div class="range" id="skill-section">
+            <p>Tech Stack</p>
+            <i><i class="fa-brands fa-html5" style="color: orangered"></i></i>
+            <br />
+            <label>HTML</label>
+            <span id="html-value">9%</span>
+            <input
+              type="range"
+              id="html-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="90"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+
+            <i
+              ><i class="fa-brands fa-css" style="color: rgb(253, 25, 253)"></i
+            ></i>
+            <br />
+            <label>CSS</label>
+            <span id="css-value">80%</span>
+            <input
+              type="range"
+              id="css-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="80"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+
+            <i
+              ><i
+                class="fa-brands fa-bootstrap"
+                style="color: rgb(83, 83, 241)"
+              ></i
+            ></i>
+            <br />
+            <label>BOOSTRAP</label>
+            <span id="bootstrap-value">60%</span>
+            <input
+              type="range"
+              id="bootstrap-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="60"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+
+            <i
+              ><i class="fa-brands fa-js" style="color: rgb(249, 249, 24)"></i
+            ></i>
+            <br />
+            <label>JAVASCRIPT</label>
+            <span id="javascript-value">20%</span>
+            <input
+              type="range"
+              id="javascript-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="20"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+
+            <i
+              ><i
+                class="fa-brands fa-python"
+                style="color: rgb(91, 104, 251)"
+              ></i
+            ></i>
+            <br />
+            <label>PYTHON</label>
+            <span id="python-value">30%</span>
+            <input
+              type="range"
+              id="python-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="30"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+
+            <i><i class="fa-brands fa-figma" style="color: white"></i></i>
+            <br />
+            <label>UI/UX - Figma</label>
+            <span id="figma-value">80%</span>
+            <input
+              type="range"
+              id="figma-skill"
+              min="0"
+              max="100"
+              step="10"
+              value="0"
+              data-target="80"
+              disabled
+              list="tickmarks"
+            />
+            <datalist id="tickmarks">
+              <option value="0" label="0"></option>
+              <option value="10" label="10%"></option>
+              <option value="20" label="20%"></option>
+              <option value="30" label="30%"></option>
+              <option value="40" label="40%"></option>
+              <option value="50" label="50%"></option>
+              <option value="60" label="60%"></option>
+              <option value="70" label="70%"></option>
+              <option value="80" label="80%"></option>
+              <option value="90" label="90%"></option>
+              <option value="100" label="100%"></option>
+            </datalist>
+          </div>
+
+          <div class="circle">
+            <p>Professional skills</p>
+            <div class="boxes">
+              <div class="creativity">
+                80% <br />
+                <span>Creativity</span>
+              </div>
+
+              <div class="solve">
+                70% <br />
+                <span
+                  >problem <br />
+                  solving</span
+                >
+              </div>
+            </div>
+            <div class="box">
+              <div class="creativity">
+                60% <br />
+                <span>Teamwork</span>
+              </div>
+              <div class="solve">
+                50% <br />
+                <span>Communication</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="project">
+        <h3>My <span>Projects</span></h3>
+        <div class="design">
+          <div class="bookmark"><img src="./images/bookmark.jpg" alt="" /></div>
+          <div class="calculator">
+            <img src="./images/calculator.jpg" alt="" />
+            <img src="./images/newshome.jpg" alt="" />
+          </div>
+          <div class="blogr">
+            <img src="./images/blogr.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <h3>Contact <span>Me</span></h3>
+
+        <div class="content">
+          <div class="text">
+            <h5>Let's Work Together</h5>
+            <p>
+              Interested in working together or discussing a project idea?
+            
+              I’m open to freelance opportunities, collaborations, and tech
+              partnerships. 
+              Get in touch and let’s create something great.
+            </p>
+            <div>
+              <i><i class="bx bxl-gitub"></i></i>
+              <i><i class="bx bxl-mail"></i></i>
+            </div>
+            <div class="social">
+              <a
+                href="https://www.facebook.com/profile.php?id=61573172302728"
+                target="_blank"
+                rel="noopener noreffer"
+                ><i><i class="bx bxl-facebook-circle"></i></i
+              ></a>
+              <a
+                href="https://wwww.instagram.com/dee.justify/"
+                target="_blank"
+                rel="noopener noreffer"
+                ><i><i class="bx bxl-instagram"></i></i
+              ></a>
+              <a
+                href="https://www.twitter.com/de_justify"
+                target="_blank"
+                rel="noopener noreffer"
+                ><i><i class="bx bxl-twitter"></i></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/oluwaseun-damilare-8b606337"
+                target="_blank"
+                rel="noopener noreffer"
+                ><i><i class="bx bxl-linkedin"></i></i
+              ></a>
+            </div>
+            <div>
+              <button>
+                <a href="./assets/Internship_Resume_Phoenix.pdf">Download Cv</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="form">
+            <form action="#" id="myform">
+              <input
+                type="text"
+                name=""
+                id="name"
+                placeholder="Enter Your Name"
+                autocomplete="name"
+              />
+              <input
+                type="email"
+                name=""
+                id="email"
+                placeholder="Enter Your Email"
+                autocomplete="email"
+              />
+              <input type="text" id="subject" placeholder="Enter Subject" />
+              <textarea
+                name=""
+                id="message"
+                placeholder="Enter Message"
+              ></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <p>[c] 2025 JUSTIFY | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
