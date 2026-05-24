@@ -115,7 +115,7 @@ form.addEventListener("submit", (e) => {
     isvalid = false;
     return;
   }
-  fetch("http://127.0.0.1:5000/contact", {
+  fetch("https://portfolio-production-caa8.up.railway.app/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
