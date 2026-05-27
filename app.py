@@ -49,7 +49,6 @@ def contact():
 
             server.login(EMAIL_USER, EMAIL_PASS)
             server.send_message(msg)
-            print(server.send_message(msg))
             server.quit()
         except Exception as smtp_error:
             print("SMTP error:", smtp_error)
