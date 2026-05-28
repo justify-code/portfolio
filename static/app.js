@@ -115,36 +115,11 @@ form.addEventListener("submit", (e) => {
     isvalid = false;
     return;
   }
-  fetch("/contact", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: namevalue,
-      email: emailvalue,
-      subject: subjectvalue,
-      message: messagevalue,
-    }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("backend response:", data);
 
-      if (data.success) {
-        alert(data.message);
-        form.reset();
-      } else {
-        alert(data.message || "Something went wrong.");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      alert("cannot reach the server. Pleae try again.");
-    })
-
-  // if (isvalid) {
-  //   alert("Thanks! Your message has been sent successfully.");
-  //   form.reset();
-  // }
+  if (isvalid) {
+    alert("Thanks! Your message has been sent successfully.");
+   form.reset();
+ }
 
   
 });
