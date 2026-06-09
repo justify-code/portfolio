@@ -78,65 +78,27 @@ typeFullstackLoop();
 
 // form validation
 const form = document.getElementById("myform");
+
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
   let isvalid = true;
 
-  
   const namevalue = document.getElementById("name").value.trim();
   const emailvalue = document.getElementById("email").value.trim();
   const subjectvalue = document.getElementById("subject").value.trim();
   const messagevalue = document.getElementById("message").value.trim();
 
-  console.log("name:", namevalue);
-  console.log("email:", emailvalue);
-  console.log("subject:", subjectvalue);
-  console.log("message:", messagevalue);
+  if (namevalue === "") isvalid = false;
 
-  
-  if (namevalue === "") {
-    //alert("please enter your name");
-    isvalid = false;
-    return;
-  }
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!emailRegex.test(emailvalue)) {
-    //alert("please enter a valid email");
-    isvalid = false;
-    return;
-  }
-  if (subjectvalue === "") {
-    //alert("enter a subject");
-    isvalid = false;
-    return;
-  }
-  if (messagevalue === "") {
-    //alert("enter a message");
-    isvalid = false;
-    return;
-  }
+  if (!emailRegex.test(emailvalue)) isvalid = false;
 
-  if (isvalid) {
-    alert("Thanks! Your message has been sent successfully.");
-   form.reset();
- }
+  if (subjectvalue === "") isvalid = false;
+  if (messagevalue === "") isvalid = false;
 
-  
+  if (!isvalid) {
+    e.preventDefault();
+  }
 });
-
-//// menu-toggle
-const btn = document.getElementById("menu-icon");
-const nav = document.getElementById("mobile");
-
-btn.onclick = () => {
-  if (nav.style.display == "block") {
-    nav.style.display = "none";
-    btn.setAttribute("src", "./images/icon-menu.svg");
-  } else {
-    nav.style.display = "block";
-    btn.setAttribute("src", "./images/icon-close.svg");
-  }
-};
 
 ///// RANGE - ANIMATION
 const skillSection = document.querySelector("#skill-section");

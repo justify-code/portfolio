@@ -158,8 +158,7 @@ header {
 .btn button {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
-  background-color: var(--background);
-  border: 1px solid var(--hover_effect);
+  background-color: var(--sub_text);
 }
 .btn button a {
   text-decoration: none;
