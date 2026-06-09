@@ -77,29 +77,22 @@ typeFullstackLoop();
 
 
 // form validation
-const form = document.getElementById("myform");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-form.addEventListener("submit", (e) => {
-  let isvalid = true;
+  const formData = new FormData(form);
 
-  const namevalue = document.getElementById("name").value.trim();
-  const emailvalue = document.getElementById("email").value.trim();
-  const subjectvalue = document.getElementById("subject").value.trim();
-  const messagevalue = document.getElementById("message").value.trim();
+  const res = await fetch("https://formspree.io/f/mvzylqbw", {
+    method: "POST",
+    body: formData,
+    headers: { Accept: "application/json" }
+  });
 
-  if (namevalue === "") isvalid = false;
-
-  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (!emailRegex.test(emailvalue)) isvalid = false;
-
-  if (subjectvalue === "") isvalid = false;
-  if (messagevalue === "") isvalid = false;
-
-  if (!isvalid) {
-    e.preventDefault();
+  if (res.ok) {
+    alert("Message sent!");
+    form.reset();
   }
 });
-
 ///// RANGE - ANIMATION
 const skillSection = document.querySelector("#skill-section");
 const skills = [
