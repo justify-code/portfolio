@@ -1,12 +1,3 @@
-//const text    = new Typed('.text' , {
-// string: ["Frontend developer", "UIUX Designer"],
-// typeSpeed: 100,
-// backSpeed: 100,
-//  backDelay: 1000,
-//   loop: true
-//}
-//);
-///// typing text
 
 const typingText = document.getElementById("typing-text");
 const strings = ["Front-end Developer", "UI/UX Designer", "Back-end Developer"];
@@ -39,7 +30,6 @@ function updateValue(slider) {
   slider.nextElementSibling.textContent = slider.value;
 }
 
-/// about typing text
 
 const typingText2 = document.getElementById("typing-text2");
 const fullstackText = "Fullstack Developer";
@@ -77,6 +67,7 @@ typeFullstackLoop();
 
 
 // form validation
+const form = document.getElementById("myform");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -93,6 +84,7 @@ form.addEventListener("submit", async (e) => {
     form.reset();
   }
 });
+
 ///// RANGE - ANIMATION
 const skillSection = document.querySelector("#skill-section");
 const skills = [
@@ -146,211 +138,3 @@ const observer = new IntersectionObserver(
 
 observer.observe(skillSection);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const skills = [
-//     { id: "html-skill", valueId: "html-value", value: 90 },
-//     { id: "css-skill", valueId: "css-value", value: 80 },
-//     { id: "javascript-skill", valueId: "javascript-value", value: 70 },
-//     { id: "bootstrap-skill", valueId: "bootstrap-value", value: 75 },
-//     { id: "figma-skill", valueId: "figma-value", value: 85 },
-//     { id: "python-skill", valueId: "python-value", value: 65 }
-//   ];
-
-//   skills.forEach(skill => {
-//     const range = document.getElementById(skill.id);
-//     const text = document.getElementById(skill.valueId);
-
-//     if (!range || !text) return; // prevent any errors
-
-//     let current = 0;
-//     const target = skill.value;
-//     const interval = setInterval(() => {
-//       if (current >= target) {
-//         clearInterval(interval);
-//       } else {
-//         current++;
-//         range.value = current;
-//         range.style.setProperty("--val", `${current}%`);
-//         text.textContent = `${current}%`;
-//       }
-//     }, 15); // controls animation speed
-//   });
-// });
-
-// // Robust skill-range animator
-// (() => {
-//   // Define skills by range input id + final value
-//   const skills = [
-//     { id: 'html-skill', value: 0 },
-//     { id: 'css-skill', value: 0 },
-//     { id: 'javascript-skill', value: 0},
-//     { id: 'bootstrap-skill', value: 0},
-//     { id: 'python-skill', value: 0},
-//     { id: 'figma-skill', value: 0}
-//   ];
-
-//   // Animation duration in ms for each bar (adjust as desired)
-//   const DURATION = 800;
-
-//   skills.forEach(skill => {
-//     const rangeEl = document.getElementById(skill.id);
-
-//     if (!rangeEl) {
-//       // defensive: if the input is missing, warn and skip
-//       console.warn(`Range input not found: #${skill.id} — skipping this skill.`);
-//       return;
-//     }
-
-//     // Try to find the associated span that displays the percent.
-//     // Priority:
-//     // 1) element with id `${id.replace('-skill','')}-value` (if you gave one)
-//     // 2) previousElementSibling if it's a <span> (your HTML: <label>, <span>, <input>)
-//     // 3) first <span> found inside the same parent
-//     const autoId = skill.id.replace('-skill', '') + '-value';
-//     let valueEl = document.getElementById(autoId);
-
-//     if (!valueEl) {
-//       const prev = rangeEl.previousElementSibling;
-//       if (prev && prev.tagName && prev.tagName.toLowerCase() === 'span') {
-//         valueEl = prev;
-//       } else if (rangeEl.parentElement) {
-//         valueEl = rangeEl.parentElement.querySelector('span');
-//       }
-//     }
-
-//     if (!valueEl) {
-//       // not fatal — warn and create a lightweight one after the label so the user sees progress
-//       console.warn(`Percent <span> not found for #${skill.id}. Creating a fallback span.`);
-//       const fallback = document.createElement('span');
-//       fallback.textContent = '0%';
-//       // insert fallback before the range element
-//       rangeEl.parentElement && rangeEl.parentElement.insertBefore(fallback, rangeEl);
-//       valueEl = fallback;
-//     }
-
-//     // Ensure range starts at 0 visually
-//     rangeEl.value = 0;
-//     rangeEl.style.setProperty('--val', '0%');
-//     valueEl.textContent = '0%';
-
-//     // Animation using requestAnimationFrame for smoothness
-//     let start = null;
-//     const from = 0;
-//     const to = Math.max(0, Math.min(100, skill.value | 0)); // clamp & ensure number
-
-//     function step(timestamp) {
-//       if (!start) start = timestamp;
-//       const elapsed = timestamp - start;
-//       const progress = Math.min(1, elapsed / DURATION); // 0..1
-
-//       // ease-out (optional): use a simple ease function
-//       const eased = 1 - Math.pow(1 - progress, 3);
-
-//       const current = Math.round(from + (to - from) * eased);
-
-//       // update range, css variable, and text
-//       rangeEl.value = current;
-//       rangeEl.style.setProperty('--val', `${current}%`);
-//       valueEl.textContent = `${current}%`;
-
-//       if (progress < 1) {
-//         requestAnimationFrame(step);
-//       } else {
-//         // ensure final exact value
-//         rangeEl.value = to;
-//         rangeEl.style.setProperty('--val', `${to}%`);
-//         valueEl.textContent = `${to}%`;
-//       }
-//     }
-
-//     // Start animation on next frame (safer than starting immediately)
-//     requestAnimationFrame(step);
-//   });
-// })();
-
-// const skills = [
-//   { id: "html-skill", valueId: "html-value", value: 90 },
-//   { id: "css-skill", valueId: "css-value", value: 80 },
-//   { id: "js-skill", valueId: "js-value", value: 20 },
-//   { id: "bootstrap-skill", valueId: "bootstrap-value", value: 60 },
-//   { id: "python-skill", valueId: "python-value", value: 30 },
-//   { id: "figma-skill", valueId: "figma-value", value: 80 },
-// ];
-// skills.forEach((skill) => {
-//   const range = document.getElementById(skill.id);
-//   const text = document.getElementById(skill.valueId);
-//   let current = 0;
-
-//   const interval = setInterval(() => {
-//     if (current >= skill.value) {
-//       clearInterval(interval);
-//     } else {
-//       current++;
-//       range.value = current;
-//       range.style.setProperty('--val', `${current}%`);
-//       text.content = `${current}%`;
-//     }
-//   }, 15); // animation speed
-// });
-
-//  const typewriter = document.getElementById('about-text');
-//  const text = "Full-stack Developer"
-//  let i = 0 ;
-//      let isDeleting = false;
-
-//     function type() {
-//         if (!isDeleting) {
-//             typewriter.innerHTML = text.substring(0, i + 1);
-//             i++;
-//             if (i === text.length) {
-//                 isDeleting = true;
-//                 setTimeout(type, 1000);
-//                 return;
-//             }
-//         } else {
-//             typewriter.innerHTML = text.substring(0, i - 1);
-//             i --;
-//             if (i === 0) {
-//                 isDeleting = false;
-//             }
-//         }
-//          setTimeout(type, isDeleting ? 50 : 100);
-//     }
-//     type();

@@ -485,7 +485,7 @@ header {
   border-radius: 5px;
 }
 #figma-skill::-webkit-slider-runnable-track{
-  background: linear-gradient(to right,  #0ff  (--val, 0%), #ddd (--val, 0%) );
+  background: linear-gradient(to right,  #0ff  (--val, 0%), rgb(2, 255,255) (--val, 0%) );
   height: 6px;
   border-radius: 5px;
 } 
