@@ -1,4 +1,32 @@
 
+window.addEventListener("load", () => {
+  document.querySelector(".home").classList.add("show");
+});
+
+window.addEventListener("load", () => {
+  document.querySelector(".about").classList.add("show");
+});
+
+//// menu toggle
+const MenuIcon = document.getElementById("openbtn");
+const CloseIcon = document.getElementById("closebtn");
+const NavBar = document.getElementById('mobile');
+
+MenuIcon.addEventListener("click", () =>{
+  NavBar.classList.add("active");
+
+  MenuIcon.style.display = "none";
+  CloseIcon.style.display = "block";
+});
+
+CloseIcon.addEventListener("click", () =>{
+  NavBar.classList.remove("active");
+
+  CloseIcon.style.display = "none";
+  MenuIcon.style.display = "block";
+});
+console.log(NavBar.classList)
+
 const typingText = document.getElementById("typing-text");
 const strings = ["Front-end Developer", "UI/UX Designer", "Back-end Developer"];
 let currentString = 0;
@@ -32,7 +60,7 @@ function updateValue(slider) {
 
 
 const typingText2 = document.getElementById("typing-text2");
-const fullstackText = "Fullstack Developer";
+const fullstackText = "Fullstack Web Developer";
 let charIndex2 = 0;
 let isDeleting2 = false;
 
@@ -114,7 +142,7 @@ const observer = new IntersectionObserver(
               input.style.setProperty("--val", `${current}%`);
               span.textContent = `${current}%`;
               current++;
-              setTimeout(update, 20); // 20ms delay between steps
+              setTimeout(update, 15); // 20ms delay between steps
             }
           };
           update();
@@ -137,4 +165,58 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(skillSection);
+
+//////
+const circles = document.querySelectorAll(".creativity, .solve");
+
+circles.forEach(circle => {
+  let current = 0;
+  const target = circle.dataset.percent;
+
+  const percentText = circle.querySelector(".percent");
+
+  const animate = setInterval(() => {
+    if (current >= target) {
+      clearInterval(animate);
+      return;
+    }
+
+    current++;
+
+    circle.style.background =
+      `conic-gradient(cyan ${current * 3.6}deg, #111 0deg)`;
+
+    percentText.textContent = `${current}%`;
+  }, 20);
+});
+// MODAL
+const UiUxBtn = document.getElementById("uiuxbtn");
+const FrontEndBtn = document.getElementById("frontendbtn");
+const BackEndBtn = document.getElementById("backendbtn");
+
+const UiuxModal = document.getElementById("uiuxmodal");
+const WebDesignModal = document.getElementById("webdesignmodal");
+const WebAppModal = document.getElementById("webappmodal");
+
+const CancelBtn = document.querySelectorAll(".cancelbtn");
+
+UiUxBtn.addEventListener("click", () => {
+  UiuxModal.style.display = "block"
+});
+
+CancelBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".modal").forEach((modal) => {
+      modal.style.display = "none"
+    });
+  });
+});
+
+FrontEndBtn.addEventListener("click", () => {
+  WebDesignModal.style.display = "block"
+});
+
+BackEndBtn.addEventListener("click", () => {
+  WebAppModal.style.display = "block"
+});
 

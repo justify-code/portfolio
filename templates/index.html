@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" 
-    href="{{ url_for( 'static', filename='style.css' ) }}" />
-    <link rel="stylesheet" href="./static/style.css">
+    <link
+      rel="stylesheet"
+      href="{{ url_for( 'static', filename='style.css' ) }}"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
@@ -23,11 +24,11 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <header>
       <a href="" class="logo">JUS<span>TIFY</span></a>
       <div class="nav-display">
-        <img id="menu-icon" src="{{ url_for('static', filename ='images/icon-menu.svg' ) }}" alt="alt" />
         <nav class="navbar" id="mobile">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -35,6 +36,17 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
+        <img
+          id="openbtn"
+          src="{{ url_for('static', filename ='images/icon-menu.svg' ) }}"
+          alt="alt"
+        />
+        <img
+          id="closebtn"
+          src="{{ url_for('static', filename = 'images/icon-close.svg') }}"
+          alt="alt"
+          style="display: none"
+        />
       </div>
     </header>
 
@@ -45,18 +57,23 @@
           <h3>JUS<span>TIFY</span></h3>
           <h6>And i'm a <span id="typing-text"></span></h6>
           <p>
-            I'm a web Developer with extensive experience for 3
-            years.Transforming ideas into interactive experiences with front-end
-            development expertise and delivering seamless digital exper-iences
-            Expertise is to create and webdesign, Frontend design, and many more
+            I build responsive websites and web applications with modern
+            technologies and user-centered design.
           </p>
-
-          <div class="btn">
-            <button><a href="">Hire Me</a></button>
+          <div class="home_btn">
+            <a class="project_link">View Projects 🧑‍💻</a>
+            <a class="resume_link">My Resume</a>
           </div>
+          <main class="tag">
+            <div class="radio"></div>
+            <span>Open to Internships & Junior Developer roles</span>
+          </main>
         </div>
         <div class="home-img">
-          <img src="{{ url_for('static', filename='images/pic2.jpg' ) }}" alt="" />
+          <img
+            src="{{ url_for('static', filename='images/mydp.png' ) }}"
+            alt=""
+          />
 
           <div class="social">
             <a
@@ -65,8 +82,11 @@
               ><i><i class="bx bxl-facebook-circle"></i></i
             ></a>
 
-            <a href="https://wwww.instagram.com/dee.justify" target="_blank"
-              ><i><i class="bx bxl-instagram"></i></i
+            <a
+              href="https://github.com/justify-code"
+              target="_blank"
+              rel="noopener  noreffer"
+              ><i><i class="fa fa-github" aria-hidden="true"></i></i
             ></a>
 
             <a href="https://www.twitter.com/de_justify" target="_blank"
@@ -74,40 +94,66 @@
             ></a>
 
             <a
-              href="https://www.linkedin.com/in/oluwaseun-damilare-8b606337"
+              href="https://www.linkedin.com/in/oluwaseun-damilare-8b6063377/"
               target="_blank"
               ><i><i class="bx bxl-linkedin"></i></i
             ></a>
-
           </div>
         </div>
+      </div>
+      <div class="bar">
+        <p>HTML5</p>
+        <p>CSS3</p>
+        <p>Bootstrap</p>
+        <p>Javascript</p>
+        <p>Figma</p>
+        <p>Python</p>
+        <p>Git & GitHub</p>
       </div>
     </section>
 
     <section id="about">
       <div class="about">
-        <img src="{{ url_for( 'static', filename='images/pic2.jpg' )}}" alt="" />
+        <img
+          src="{{ url_for( 'static', filename='images/mydp.png' )}}"
+          alt=""
+        />
         <div class="about-text">
           <h3>About <span>Me</span></h3>
           <h6>I'm a <span id="typing-text2"></span></h6>
           <p>
-            I am a versatile Full Stack Developer passionate about building
-            modern web applications. I bridge the gap between design and
-            development by creating responsive, user-friendly interfaces while
-            ensuring robust server-side functionality. Skilled in HTML, CSS,
-            Bootsrap JavaScript, Python, Django, Flask and Databases, I thrive
-            on turning ideas into interactive and efficient digital solutions.
-            My goal is to deliver code that’s clean, maintainable, and scalable,
-            while continuously exploring emerging technologies to improve the
-            user experience.
+            I'm a passionate Full Stack Developer and UI/UX Designer dedicated
+            to creating modern, responsive, and user-friendly digital
+            experiences. With a strong foundation in HTML, CSS, JavaScript,
+            Python, Bootstrap, and Figma, I enjoy transforming ideas into
+            functional and visually appealing web applications.
+          </p>
+          <p class="focus">
+            I have experience building personal and real-world projects,
+            including portfolio websites and inventory management systems, while
+            continuously improving my skills in front-end development, back-end
+            development, and user interface design. My goal is to develop
+            scalable, efficient, and impactful solutions that provide excellent
+            user experiences and solve real-world problems.
           </p>
           <div class="stack">
-            <h4>
-            💻Tech stack:
-            <span>
-              HTML, CSS, Bootstrap, Javascript, Python(Django, Flask)</span
-            >
-          </h4>
+            <div class="stats">
+              <div>
+                <p>2</p>
+                <span class="note">
+                  Completed <br />
+                  Projects</span
+                >
+              </div>
+              <div>
+                <p>1+</p>
+                <span class="note"> Years Experiece</span>
+              </div>
+              <div>
+                <p>6+</p>
+                <span class="note">Technologies</span>
+              </div>
+            </div>
           </div>
           <div class="btn_skills">
             <a href="#"> <button>More About Me</button></a>
@@ -122,37 +168,97 @@
 
         <div class="pro">
           <div class="uiux">
-            <h5>UIUX - Figma</h5>
+            <h5>UIUX</h5>
             <i><i class="fa-brands fa-figma"></i></i>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus similique deleniti nostrum debitis, corrupti veniam
-              optio nulla impedit eveniet veritatis.
+              Crafting user-focused digital experiences through wireframing,
+              prototyping, and interface design, with an emphasis on usability
+              and accessibility.
             </p>
-            <button>Read More</button>
+            <button id="uiuxbtn" data-service="uiux">
+              Learn More <span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
           </div>
 
           <div class="front-end">
-            <h5>Web Design</h5>
+            <h5>💻 Web Design</h5>
             <i><i class="bxr bx-code"></i> </i>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
-              voluptate vero distinctio repellat nemo ducimus officiis odio
-              accusantium libero molestiae!
+              Developing visually compelling and responsive websites that
+              strengthen brand presence and provide exceptional user
+              experiences.
             </p>
-            <button>Read More</button>
+            <button id="frontendbtn" data-service="webdesign">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
 
           <div class="back-end">
-            <h5>App Development</h5>
-            <i><i class="fa-brands fa-apple fa-xl"></i></i>
+            <h5>Web App Development</h5>
+            <i><i class="fa-solid fa-database"></i></i>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-              libero nihil odit doloremque sint animi labore accusamus
-              praesentium sapiente accusantium.
+              Transforming ideas into functional web applications using modern
+              technologies, clean code practices, and scalable development
+              approaches.
             </p>
-            <button class="">Read More</button>
+            <button id="backendbtn" data-service="webapp">
+              Learn More
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
+        </div>
+
+        <div class="modal" id="uiuxmodal">
+          <p>
+            Creating user-focused digital experiences that combine
+            functionality, usability, and visual appeal. I design wireframes,
+            prototypes, and high-fidelity interfaces in Figma to ensure products
+            are intuitive, engaging, and aligned with user needs.
+          </p>
+          <span>What i offer : </span>
+          <li>Wireframing & Prototyping</li>
+          <li>Web Designs</li>
+          <li>Mobile designs</li>
+          <li>user research (UX) designs</li>
+          <li>user interface (UI) designs</li>
+          <li>Design systems</li>
+          <button class="cancelbtn">Cancel</button>
+        </div>
+
+        <div class="modal" id="webdesignmodal">
+          <p>
+            💻Designing modern, responsive, and visually appealing websites that
+            provide seamless experiences across all devices. My focus is on
+            creating layouts that are both attractive and easy to navigate while
+            maintaining performance and accessibility.
+          </p>
+          <span>What i offer: </span>
+          <li>Landing Pages</li>
+          <li>Website Redesign</li>
+          <li>Portfolio websites</li>
+          <li>Business websites</li>
+          <li>Responsive websites design</li>
+          <li>Cross-Device Optimization</li>
+          <button class="cancelbtn">Cancel</button>
+        </div>
+
+        <div class="modal" id="webappmodal">
+          <p>
+            Building full-stack web applications that combine responsive
+            front-end interfaces with robust back-end functionality. I develop
+            solutions that are scalable, efficient, and designed to deliver
+            seamless user experiences while handling real-world business
+            requirements.
+          </p>
+          <span>What i offer: </span>
+          <li>front-end development</li>
+          <li>back-end development</li>
+          <li>Database integration</li>
+          <li>API Development & Integration</li>
+          <li>Dashboard & Forms Authetication</li>
+          <li>Full-stack Web Applications</li>
+          <button class="cancelbtn">Cancel</button>
         </div>
 
         <div class="container_skills">
@@ -225,7 +331,7 @@
               ></i
             ></i>
             <br />
-            <label>BOOSTRAP</label>
+            <label>BOOTSTRAP</label>
             <span id="bootstrap-value">60%</span>
             <input
               type="range"
@@ -350,12 +456,13 @@
           <div class="circle">
             <p>Professional skills</p>
             <div class="boxes">
-              <div class="creativity">
+              <div class="creativity" data-percent="80">
                 80% <br />
+                <span class="percent">0%</span>
                 <span>Creativity</span>
               </div>
 
-              <div class="solve">
+              <div class="solve" data-percent="70">
                 70% <br />
                 <span
                   >problem <br />
@@ -364,11 +471,12 @@
               </div>
             </div>
             <div class="box">
-              <div class="creativity">
+              <div class="creativity" data-percent="60">
                 60% <br />
+
                 <span>Teamwork</span>
               </div>
-              <div class="solve">
+              <div class="solve" data-percent="50">
                 50% <br />
                 <span>Communication</span>
               </div>
@@ -381,14 +489,123 @@
     <section id="projects">
       <div class="project">
         <h3>My <span>Projects</span></h3>
-        <div class="design">
-          <div class="bookmark"><img src="{{ url_for ('static', filename = 'images/bookmark.jpg' )}}" alt="" /></div>
-          <div class="calculator">
-            <img src="{{ url_for ('static', filename = 'images/calculator.jpg' )  }}" alt="" />
-            <img src="{{ url_for ('static',filename = 'images/newshome.jpg' ) }}" alt="" />
+        <div class="project_container">
+          <div class="desktopapp">
+            <img
+              src="{{ url_for ('static', filename = 'images/inventory_management.png') }}"
+              alt=""
+            />
+            <div class="description">
+              <h3>
+                Inventory Management System <br />
+                <span>[Python] [Tkinter] [JSON]</span>
+              </h3>
+              <article>
+                <p>
+                A desktop application developed with python for managing
+                inventory records, customer information, stock movement and
+                report generation.
+                </p>
+                <details>
+                  <p>
+                    The inventory management application is a desktop
+                    application developed to simplify inventory tracking,
+                    customer information, items collections, and report
+                    analysis. The system helps streamline operations to maintain
+                    organized business records and improve record accuracy
+                    through an easy-to-use interface.
+                  </p>
+                  <div class="features">
+                    <div>
+                  <span>Features</span>
+                  <ul>
+                    <li>Inventory Tracking</li>
+                    <li>Add, Update & Delete Products</li>
+                    <li>Customer Management</li>
+                    <li>Record Collection Tracking</li>
+                    <li>Search & Filter Records</li>
+                    <li>Data Persistence with JSON</li>
+                    <li>Report Generation</li>
+                    <li>Easy-To-Use Interface</li>
+                  </ul>
+                  </div>
+                  <div>
+                  <span>Technologies</span>
+                  <ul>
+                    <li>Python</li>
+                    <li>Tkinter</li>
+                    <li>JSON</li>
+                    <li>OpenPyXL</li>
+                  </ul>
+                  </div>
+                  </div>
+                </details>
+              </article>
+              <div class="details_btn">
+                <a href="">Watch Demo</a>
+                <a
+                  href="https://github.com/justify-code/store-inventory-management-system"
+                  >GitHub</a
+                >
+              </div>
+            </div>
           </div>
-          <div class="blogr">
-            <img src="{{ url_for ('static', filename = 'images/blogr.jpg' ) }}" alt="" />
+          <div class="desktopapp">
+            <img src="../static/images/portfolio screecapture.png" alt="" />
+            <div class="description">
+              <h3>
+                Portfolio Website
+                <span>[HTML] [CSS] [JavaScript] [Flask]</span>
+              </h3>
+              <article>
+                <p>
+                  A desktop application developed with python for managing
+                  inventory records, customer information, stock movement and
+                  report generation.
+                </p>
+                <details>
+                  <p>
+                    The inventory management application is a desktop
+                    application developed to simplify inventory tracking,
+                    customer information, items collections, and report
+                    analysis. The system helps streamline operations to maintain
+                    organized business records and improve record accuracy
+                    through an easy-to-use interface.
+                  </p>
+                  <div class="features">
+                    <div>
+                    <span>Features</span>
+                    <ul>
+                      <li>Inventory Tracking</li>
+                      <li>Add, Update & Delete Products</li>
+                      <li>Customer Management</li>
+                      <li>Record Collection Tracking</li>
+                      <li>Search & Filter Records</li>
+                      <li>Data Persistence with JSON</li>
+                      <li>Report Generation</li>
+                      <li>Easy-To-Use Interface</li>
+                    </ul>
+                    </div>
+                   <div>
+                    <span>Technologies</span>
+                    <ul>
+                      <li>Python</li>
+                      <li>Tkinter</li>
+                      <li>JSON</li>
+                      <li>OpenPyXL</li>
+                    </ul>
+                   </div>
+                  </div>
+                </details>
+              </article>
+              <div class="details_btn">
+                <a href="">Watch Demo</a>
+                <a
+                  href="https://github.com/justify-code/store-inventory-management-system"
+                  >GitHub</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -402,11 +619,9 @@
           <div class="text">
             <h5>Let's Work Together</h5>
             <p>
-              Interested in working together or discussing a project idea?
-            
-              I’m open to freelance opportunities, collaborations, and tech
-              partnerships. 
-              Get in touch and let’s create something great.
+              Interested in working together or discussing a project idea? I’m
+              open to freelance opportunities, collaborations, and tech
+              partnerships. Get in touch and let’s create something great.
             </p>
             <div>
               <i><i class="bx bxl-gitub"></i></i>
@@ -420,10 +635,10 @@
                 ><i><i class="bx bxl-facebook-circle"></i></i
               ></a>
               <a
-                href="https://wwww.instagram.com/dee.justify/"
+                href="https://wwww.github.com/justify-code/"
                 target="_blank"
                 rel="noopener noreffer"
-                ><i><i class="bx bxl-instagram"></i></i
+                ><i><i class="fa fa-github" aria-hidden="true"></i></i
               ></a>
               <a
                 href="https://www.twitter.com/de_justify"
@@ -440,13 +655,20 @@
             </div>
             <div>
               <button>
-                <a href="{{ url_for ('static', filename = 'documents/Internship_Resume_Phoenix.pdf' ) }}">Download Cv</a>
+                <a
+                  href="{{ url_for ('static', filename = 'documents/Internship_Resume_Phoenix.pdf' ) }}"
+                  >Download Cv <i class="fa-solid fa-download"></i
+                ></a>
               </button>
             </div>
           </div>
 
           <div class="form">
-            <form action="https://formspree.io/f/mvzylqbw" id="myform" method = "POST">
+            <form
+              action="https://formspree.io/f/mvzylqbw"
+              id="myform"
+              method="POST"
+            >
               <input
                 type="text"
                 name="name"
@@ -461,7 +683,12 @@
                 placeholder="Enter Your Email"
                 autocomplete="email"
               />
-              <input type="text" id="subject" name = "subject" placeholder="Enter Subject" />
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter Subject"
+              />
               <textarea
                 name="message"
                 id="message"
