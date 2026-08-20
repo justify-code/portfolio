@@ -167,28 +167,7 @@ const observer = new IntersectionObserver(
 observer.observe(skillSection);
 
 //////
-const circles = document.querySelectorAll(".creativity, .solve");
 
-circles.forEach(circle => {
-  let current = 0;
-  const target = circle.dataset.percent;
-
-  const percentText = circle.querySelector(".percent");
-
-  const animate = setInterval(() => {
-    if (current >= target) {
-      clearInterval(animate);
-      return;
-    }
-
-    current++;
-
-    circle.style.background =
-      `conic-gradient(cyan ${current * 3.6}deg, #111 0deg)`;
-
-    percentText.textContent = `${current}%`;
-  }, 20);
-});
 // MODAL
 const UiUxBtn = document.getElementById("uiuxbtn");
 const FrontEndBtn = document.getElementById("frontendbtn");

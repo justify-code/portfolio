@@ -57,12 +57,13 @@
           <h3>JUS<span>TIFY</span></h3>
           <h6>And i'm a <span id="typing-text"></span></h6>
           <p>
-            I build responsive websites and web applications with modern
-            technologies and user-centered design.
+            I build practical web applications and digital experiences using
+            Python, Django, Flask and modern web technologies, with a strong
+            focus on usability and clean design.
           </p>
           <div class="home_btn">
-            <a class="project_link">View Projects 🧑‍💻</a>
-            <a class="resume_link">My Resume</a>
+            <a href="#projects" class="project_link">Explore my works 🧑‍💻</a>
+            <!-- <a class="resume_link">My Resume</a> -->
           </div>
           <main class="tag">
             <div class="radio"></div>
@@ -363,7 +364,7 @@
             ></i>
             <br />
             <label>JAVASCRIPT</label>
-            <span id="javascript-value">20%</span>
+            <span id="javascript-value">50%</span>
             <input
               type="range"
               id="javascript-skill"
@@ -371,7 +372,7 @@
               max="100"
               step="10"
               value="0"
-              data-target="20"
+              data-target="50"
               disabled
               list="tickmarks"
             />
@@ -397,7 +398,7 @@
             ></i>
             <br />
             <label>PYTHON</label>
-            <span id="python-value">30%</span>
+            <span id="python-value">60%</span>
             <input
               type="range"
               id="python-skill"
@@ -405,7 +406,7 @@
               max="100"
               step="10"
               value="0"
-              data-target="30"
+              data-target="50"
               disabled
               list="tickmarks"
             />
@@ -453,35 +454,68 @@
             </datalist>
           </div>
 
-          <div class="circle">
-            <p>Professional skills</p>
-            <div class="boxes">
-              <div class="creativity" data-percent="80">
-                80% <br />
-                <span class="percent">0%</span>
-                <span>Creativity</span>
-              </div>
+          <div class="professional_skills">
+            <h3 class="prf_skill_text">Profesional Skills</h3>
 
-              <div class="solve" data-percent="70">
-                70% <br />
-                <span
-                  >problem <br />
-                  solving</span
-                >
-              </div>
-            </div>
-            <div class="box">
-              <div class="creativity" data-percent="60">
-                60% <br />
+            <div class="professional_grid">
+              <div class="professional_card">
+                <div class="professional_icon">
+                  <i class="bx bx-bulb"></i>
+                </div>
 
-                <span>Teamwork</span>
+                <h4>Problem Solving</h4>
+
+                <p>
+                  I enjoy breaking down complex problems and finding simple,
+                  effective solutions.
+                </p>
               </div>
-              <div class="solve" data-percent="50">
-                50% <br />
-                <span>Communication</span>
+              <div class="professional_card">
+                <div class="professional_icon">
+                  <i class="bx bx-palette"></i>
+                </div>
+
+                <h4>Creativity</h4>
+
+                <p>
+                  I bring creative ideas to turn concepts into unique and
+                  engaging digital experiences.
+                </p>
+              </div>
+              <div class="professional_card">
+                <div class="professional_icon">
+                  <i class="bx bx-group"></i>
+                </div>
+
+                <h4>Teamwork</h4>
+
+                <p>
+                  I collaborate effectively with others and contribute to
+                  achieving shared goals.
+                </p>
+              </div>
+              <div class="professional_card">
+                <div class="professional_icon">
+                  <i class="bx bx-message-rounded-dots"></i>
+                </div>
+
+                <h4>Communication</h4>
+
+                <p>
+                  I communicate ideas clearly and work to ensure smooth
+                  understanding in any project.
+                </p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="learning_box">
+          <i class="bx bx-rocket"></i>
+
+          <p>
+            Always <span>learning</span> and exploring new technologies to
+            improve and build better.
+          </p>
         </div>
       </div>
     </section>
@@ -502,63 +536,6 @@
               </h3>
               <article>
                 <p>
-                A desktop application developed with python for managing
-                inventory records, customer information, stock movement and
-                report generation.
-                </p>
-                <details>
-                  <p>
-                    The inventory management application is a desktop
-                    application developed to simplify inventory tracking,
-                    customer information, items collections, and report
-                    analysis. The system helps streamline operations to maintain
-                    organized business records and improve record accuracy
-                    through an easy-to-use interface.
-                  </p>
-                  <div class="features">
-                    <div>
-                  <span>Features</span>
-                  <ul>
-                    <li>Inventory Tracking</li>
-                    <li>Add, Update & Delete Products</li>
-                    <li>Customer Management</li>
-                    <li>Record Collection Tracking</li>
-                    <li>Search & Filter Records</li>
-                    <li>Data Persistence with JSON</li>
-                    <li>Report Generation</li>
-                    <li>Easy-To-Use Interface</li>
-                  </ul>
-                  </div>
-                  <div>
-                  <span>Technologies</span>
-                  <ul>
-                    <li>Python</li>
-                    <li>Tkinter</li>
-                    <li>JSON</li>
-                    <li>OpenPyXL</li>
-                  </ul>
-                  </div>
-                  </div>
-                </details>
-              </article>
-              <div class="details_btn">
-                <a href="">Watch Demo</a>
-                <a
-                  href="https://github.com/justify-code/store-inventory-management-system"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="desktopapp">
-            <img src="../static/images/portfolio screecapture.png" alt="" />
-            <div class="description">
-              <h3>
-                Portfolio Website
-                <span>[HTML] [CSS] [JavaScript] [Flask]</span>
-              </h3>
-              <article>
-                <p>
                   A desktop application developed with python for managing
                   inventory records, customer information, stock movement and
                   report generation.
@@ -574,34 +551,84 @@
                   </p>
                   <div class="features">
                     <div>
-                    <span>Features</span>
-                    <ul>
-                      <li>Inventory Tracking</li>
-                      <li>Add, Update & Delete Products</li>
-                      <li>Customer Management</li>
-                      <li>Record Collection Tracking</li>
-                      <li>Search & Filter Records</li>
-                      <li>Data Persistence with JSON</li>
-                      <li>Report Generation</li>
-                      <li>Easy-To-Use Interface</li>
-                    </ul>
+                      <span>Features</span>
+                      <ul>
+                        <li>Inventory Tracking</li>
+                        <li>Add, Update & Delete Products</li>
+                        <li>Customer Management</li>
+                        <li>Record Collection Tracking</li>
+                        <li>Search & Filter Records</li>
+                        <li>Data Persistence with JSON</li>
+                        <li>Report Generation</li>
+                        <li>Easy-To-Use Interface</li>
+                      </ul>
                     </div>
-                   <div>
-                    <span>Technologies</span>
-                    <ul>
-                      <li>Python</li>
-                      <li>Tkinter</li>
-                      <li>JSON</li>
-                      <li>OpenPyXL</li>
-                    </ul>
-                   </div>
+                    <div>
+                      <span>Technologies</span>
+                      <ul>
+                        <li>Python</li>
+                        <li>Tkinter</li>
+                        <li>JSON</li>
+                        <li>OpenPyXL</li>
+                      </ul>
+                    </div>
                   </div>
                 </details>
               </article>
               <div class="details_btn">
-                <a href="">Watch Demo</a>
+                <a href="" style="cursor: not-allowed;">Watch Demo</a>
                 <a
                   href="https://github.com/justify-code/store-inventory-management-system"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="desktopapp">
+            <img src="../static/images/portfolio screecapture.png" alt="" />
+            <div class="description">
+              <h3>
+                Portfolio Website
+                <span>[HTML] [CSS] [JavaScript] [Flask]</span>
+              </h3>
+              <article>
+                <p>
+                  A responsive developer portfolio designed to showcase my
+                  projects, technical skills, UI/UX experience, and development
+                  journey. The site includes a Flask-powered contact system and
+                  responsive layouts designed for different screen sizes.
+                </p>
+                <details>
+                  <div class="features">
+                    <div>
+                      <span>Features</span>
+                      <ul>
+                        <li>Responsive design</li>
+                        <li>Project showcase</li>
+                        <li>Skills and service section</li>
+                        <li>Contact form</li>
+                        <li>Flask backend</li>
+                        <li>Responsive navigation</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <span>Technologies</span>
+                      <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>JavaScript</li>
+                        <li>Flask</li>
+                      </ul>
+                    </div>
+                  </div>
+                </details>
+              </article>
+              <div class="details_btn">
+                <a  style="cursor: not-allowed;">Watch Demo</a>
+                <a
+                  href="https://github.com/justify-code/portfolio"
+                  target="_blank"
                   >GitHub</a
                 >
               </div>
