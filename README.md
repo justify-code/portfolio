@@ -28,7 +28,6 @@ My personal developer portfolio built to showcase my projects, technical skills,
 
 ## 📸 Preview
 
-![Developer Portfolio](portfolio-preview.png)
 
 ## 🚀 Getting Started
 
