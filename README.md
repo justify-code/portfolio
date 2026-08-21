@@ -1,4 +1,5 @@
 # 🌐 Personal Developer Portfolio
+![Developer Portfolio](./portfolio%20screecapture.png)
 
 My personal developer portfolio built to showcase my projects, technical skills, services, and experience.
 
